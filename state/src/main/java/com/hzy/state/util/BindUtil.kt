@@ -13,6 +13,9 @@ import com.hzy.state.widget.ViewStateLayout
  */
 object BindUtil {
 
+    /**
+     * 绑定Activity
+     */
     fun bind(target: Any): ViewStateLayout {
         val contentParent: ViewGroup
         var contentIndex = 0
@@ -36,10 +39,16 @@ object BindUtil {
         return bindView(target, contentParent, contentIndex)
     }
 
+    /**
+     * 绑定fragment
+     */
     fun bindFragmentView(fragmentView: View): ViewStateLayout {
         return createViewStateLayout(fragmentView, fragmentView)
     }
 
+    /**
+     * 绑定View
+     */
     private fun bindView(target: Any, parentView: ViewGroup, index: Int): ViewStateLayout {
         val contentView = parentView.getChildAt(index)
         parentView.removeViewAt(index)

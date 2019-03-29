@@ -20,6 +20,7 @@ import com.hzy.state.controller.ViewStateNetworkStateProvider
  * @date: 2019/3/25
  */
 class ViewStateLayout : FrameLayout, IViewStateController, View.OnClickListener {
+
     private var mViewStateViewCache: SparseArray<View> = SparseArray(ViewStateConfig.VIEW_STATE_SIZE)
     @ViewState
     private var mCurrentViewState = 0
